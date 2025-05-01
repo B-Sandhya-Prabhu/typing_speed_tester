@@ -1,0 +1,135 @@
+:root {
+    --neon-blue: #00ccff;
+    --neon-pink: #ff1f71;
+    --neon-purple: #cc33ff;
+    --dark-bg: #0a0a1f;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--dark-bg);
+    color: #fff;
+    line-height: 1.6;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+h1 {
+    text-align: center;
+    color: var(--neon-blue);
+    font-size: 3rem;
+    text-shadow: 0 0 10px var(--neon-blue);
+    margin-bottom: 2rem;
+    animation: glow 2s ease-in-out infinite alternate;
+}
+
+h2 {
+    color: var(--neon-pink);
+    margin-top: 2rem;
+}
+
+.game-info {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    backdrop-filter: blur(5px);
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.1);
+}
+
+.download-btn {
+    display: inline-block;
+    padding: 1rem 2rem;
+    background: var(--neon-purple);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-top: 1rem;
+    transition: all 0.3s ease;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+.download-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px var(--neon-purple);
+}
+
+.features ul {
+    list-style: none;
+    padding: 0;
+}
+
+.features li {
+    margin: 1rem 0;
+    padding: 1rem;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 5px;
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--neon-pink);
+}
+
+.features li:hover {
+    transform: translateX(10px);
+    background: rgba(255, 255, 255, 0.1);
+    border-left-color: var(--neon-blue);
+}
+
+.installation {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 2rem;
+    border-radius: 10px;
+    margin-top: 2rem;
+    box-shadow: 0 0 20px rgba(0, 204, 255, 0.05);
+}
+
+pre {
+    background: rgba(0, 0, 0, 0.3);
+    padding: 1rem;
+    border-radius: 5px;
+    overflow-x: auto;
+    border: 1px solid var(--neon-blue);
+}
+
+code {
+    color: var(--neon-blue);
+    font-family: 'Courier New', Courier, monospace;
+}
+
+footer {
+    text-align: center;
+    padding: 2rem;
+    margin-top: 2rem;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+@keyframes glow {
+    from {
+        text-shadow: 0 0 5px var(--neon-blue),
+                     0 0 10px var(--neon-blue),
+                     0 0 15px var(--neon-blue);
+    }
+    to {
+        text-shadow: 0 0 10px var(--neon-blue),
+                     0 0 20px var(--neon-blue),
+                     0 0 30px var(--neon-blue);
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 1rem;
+    }
+    
+    h1 {
+        font-size: 2rem;
+    }
+}
